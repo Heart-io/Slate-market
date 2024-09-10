@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slate Market</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #6e7f88;
+      position: relative;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 30px;
+      padding: 50px;
+      height: 100vh;
+      justify-items: center;
+      align-items: center;
+    }
+    .button {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      position: relative;
+    }
+    .bhudda { background-color: #f7ca4f; color: #f7931a; }
+    .leopard { background-color: #f68b1f; }
+    .dough { background-color: #fbe597; color: #000000; }
+    .spin { background-color: #47268f; }
+    .kilo { background-color: #4a4a4a; }
+    .dragon { background-color: #4caf50; }
+    .spirit { background-color: #e0e0e0; color: #ffffff; }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100vh;
+      background-color: #5a7889;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .sidebar-logo img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+    h1 {
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      font-size: 36px;
+      color: black;
+      background-color: #799cae;
+    }
+
+    /* Robux and Stock Information */
+    .stock-info {
+      font-size: 14px;
+      font-weight: bold;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: black;
+    }
+    .not-stocked {
+      font-size: 14px;
+      color: red;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .in-stock {
+      font-size: 14px;
+      color: green;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* Hidden Admin Console Button */
+    #admin-console-btn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Go Back Button on Console Page */
+    #go-back-btn {
+      margin-top: 20px;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-logo">
+      <img src="https://i.ibb.co/6nDfsNt/IMG-7869-removebg-preview.png" alt="Logo">
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <h1>Slate Market</h1>
+
+  <div class="container">
+    <!-- Bhudda Fruit -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTJ74OFm6dmijaNQNWyn2O6H9yxXbgZ4hwMONYR97LqfgvLg/viewform?usp=send_form" class="button bhudda">
+      Bhudda
+      <div class="stock-info">Robux: 60</div>
+      <div class="not-stocked">Not stocked</div>
+    </a>
+    
+    <!-- Leopard Fruit -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTJ74OFm6dmijaNQNWyn2O6H9yxXbgZ4hwMONYR97LqfgvLg/viewform?usp=send_form" class="button leopard">
+      Leopard
+      <div class="stock-info">Robux: 60</div>
+      <div class="not-stocked">Not stocked</div>
+    </a>
+
+    <!-- Dough Fruit -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTJ74OFm6dmijaNQNWyn2O6H9yxXbgZ4hwMONYR97LqfgvLg/viewform?usp=send_form" class="button dough">
+      Dough
+      <div class="stock-info">Robux: 34</div>
+      <div class="not-stocked">Not stocked</div>
+    </a>
+
+    <!-- Spin Fruit -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTJ74OFm6dmijaNQNWyn2O6H9yxXbgZ4hwMONYR97LqfgvLg/viewform?usp=send_form" class="button spin">
+      Spin
+      <div class="stock-info">Robux: 18</div>
+      <div class="in-stock">In stock(1)</div>
+    </a>
+
+    <!-- Kilo Fruit -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTJ74OFm6dmijaNQNWyn2O6H9yxXbgZ4hwMONYR97LqfgvLg/viewform?usp=send_form" class="button kilo">
+      Kilo
+      <div class="stock-info">Robux: 10</div>
+      <div class="not-stocked">Not stocked</div>
+    </a>
+
+    <!-- Dragon Fruit -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTJ74OFm6dmijaNQNWyn2O6H9yxXbgZ4hwMONYR97LqfgvLg/viewform?usp=send_form" class="button dragon">
+      Dragon
+      <div class="stock-info">Robux: 150</div>
+      <div class="not-stocked">Not stocked</div>
+    </a>
+
+    <!-- Spirit Fruit -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTJ74OFm6dmijaNQNWyn2O6H9yxXbgZ4hwMONYR97LqfgvLg/viewform?usp=send_form" class="button spirit">
+      Spirit
+      <div class="stock-info">Robux: 70</div>
+      <div class="not-stocked">Not stocked</div>
+    </a>
+  </div>
+
+  <!-- Admin Console Button (hidden to regular users) -->
+  <button id="admin-console-btn">Open Admin Console</button>
+
+  <script>
+    // Replace with your actual IP address or another method of identifying yourself
+    const myIp = "YOUR_IP_ADDRESS"; // Replace with your IP
+
+    // Function to fetch current IP and display the button if it matches
+    function checkAdminAccess() {
+      fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+          if (data.ip === myIp) {
+            document.getElementById('admin-console-btn').style.display = 'block';
+          } else {
+            console.log("Access denied: IP address does not match.");
+          }
+        })
+        .catch(error => {
+          console.error("Error fetching IP address:", error);
+        });
+    }
+
+    // Run the function to check access
+    checkAdminAccess();
+
+    // Redirect to the console page when the button is clicked
+    document.getElementById('admin-console-btn').addEventListener('click', function() {
+      window.location.href = "admin_console.html"; // Redirect to the console page
+    });
+  </script>
+
+</body>
+</html>
